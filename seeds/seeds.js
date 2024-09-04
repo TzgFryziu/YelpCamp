@@ -15,14 +15,17 @@ const getRandomCampground = (descriptors, places, cities) => {
       places[Math.floor(Math.random() * places.length)]
     }`,
     location: `${cities[cityIndex].city}, ${cities[cityIndex].state}`,
-    price: `$${Math.floor(Math.random() * 2000 + 500)}`,
+    price: Math.floor(Math.random() * 2000 + 500),
     description: "xxxxxxxxxxxxxxxx",
+    image: `https://picsum.photos/1600/900?random=${Math.floor(
+      Math.random() * 1000
+    )}`,
   });
 };
 
 const seedDb = async () => {
   await Campground.deleteMany({});
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 30; i++) {
     const temp = getRandomCampground(descriptors, places, cities);
     await temp.save();
   }

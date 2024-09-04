@@ -12,6 +12,9 @@
     <p>
         <%= campground.description %>
     </p>
+    <img src="<%= campground.image %>" alt="Campground Image">
+
+
     <a href="/campgrounds/<%= campground._id %>/edit"><button>Edit</button></a>
     <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="post">
         <button>DELETE CAMPGROUND</button>

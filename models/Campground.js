@@ -6,7 +6,7 @@ const CampgroundSchema = new Schema({
     type: String,
   },
   price: {
-    type: String,
+    type: Number,
   },
   description: {
     type: String,
@@ -16,6 +16,9 @@ const CampgroundSchema = new Schema({
   //     enum: [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5],
   //   },
   location: {
+    type: String,
+  },
+  image: {
     type: String,
   },
 });
