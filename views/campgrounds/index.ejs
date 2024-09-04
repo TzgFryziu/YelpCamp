@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campgrounds</title>
-</head>
-
-<body>
+<%- layout("layouts/boilerplate.ejs") %>
     <h1>All campgrounds</h1>
-    <a href="campgrounds/new"><button>Add new campground</button></a>
     <ul>
         <% for (let campground of campgrounds) {%>
             <li>
@@ -19,6 +9,3 @@
             </li>
             <% } %>
     </ul>
-</body>
-
-</html>

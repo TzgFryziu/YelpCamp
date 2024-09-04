@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- layout("layouts/boilerplate.ejs") %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create new campground</title>
-</head>
-
-<body>
     <form action="/campgrounds" method="post">
         <p>
             <label for="title">Campground title</label>
@@ -21,7 +13,3 @@
         <button>Submit</button>
     </form>
     <a href="/campgrounds"><button>Go back</button></a>
-
-</body>
-
-</html>
