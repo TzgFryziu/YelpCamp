@@ -20,6 +20,7 @@ const CampgroundSchema = new Schema({
   },
   image: {
     type: String,
+    default: "https://picsum.photos/1600/900?random",
   },
 });
 

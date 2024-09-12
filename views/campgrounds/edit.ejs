@@ -1,17 +1,31 @@
 <%- layout("layouts/boilerplate.ejs") %>
-    <form action="/campgrounds/<%= campground._id%>?_method=PUT" method="post">
-        <p>
+    <h1 class="form-title">Edit <%= campground.title%> campground</h1>
+    <form class="campground-form" action="/campgrounds/<%= campground._id%>?_method=PUT" method="post">
+
+        <div class="form-row">
             <label for="title">Campground title</label>
-            <input type="text" name="campground[title]" id="title" placeholder="Title" value="<%= campground.title%>">
+            <input class="form-input" type="text" name="campground[title]" id="title" placeholder="Title"
+                value="<%= campground.title%>">
+        </div>
+        <div class="form-row">
             <label for="price">Price/night</label>
-            <input type="text" name="campground[price]" id="price" placeholder="0" value="<%= campground.price%>">
+            <input class="form-input" type="text" name="campground[price]" id="price" placeholder="0"
+                value="<%= campground.price%>">
+        </div>
+        <div class="form-row">
             <label for="location">Location</label>
-            <input type="text" name="campground[location]" id="location" placeholder="location"
+            <input class="form-input" type="text" name="campground[location]" id="location" placeholder="location"
                 value="<%= campground.location%>">
-        </p>
-        <textarea name="campground[description]" id="description"
-            placeholder="description"><%= campground.description%></textarea>
+        </div>
+        <div class="form-row">
+            <label for="img-url">Image url</label>
+            <input class="form-input" type="text" name="campground[img-url]" id="img-url" placeholder="img-url"
+                value="<%= campground.image%>">
+        </div>
+        <textarea class="form-input" name="campground[description]" id="description" placeholder="description">
+            <%= campground.description%>
+                </textarea>
         </textarea>
         <button>Submit</button>
     </form>
-    <a href="/campgrounds/<%= campground._id %>"><button>Go back</button></a>
+    <a class="button-link" href="/campgrounds/<%= campground._id %>">Go back</a>

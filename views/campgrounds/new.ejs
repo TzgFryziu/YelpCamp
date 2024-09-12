@@ -1,15 +1,24 @@
 <%- layout("layouts/boilerplate.ejs") %>
+    <h1 class="form-title">Create new campground</h1>
+    <form class="campground-form" action="/campgrounds" method="post">
 
-    <form action="/campgrounds" method="post">
-        <p>
+        <div class="form-row">
             <label for="title">Campground title</label>
-            <input type="text" name="campground[title]" id="title" placeholder="Title">
+            <input class="form-input" type="text" name="campground[title]" id="title" placeholder="Title">
+        </div>
+        <div class="form-row">
             <label for="price">Price/night</label>
-            <input type="text" name="campground[price]" id="price" placeholder="0">
+            <input class="form-input" type="text" name="campground[price]" id="price" placeholder="0">
+        </div>
+        <div class="form-row">
             <label for="location">Location</label>
-            <input type="text" name="campground[location]" id="location" placeholder="location">
-        </p>
-        <textarea name="campground[description]" id="description" placeholder="description"></textarea>
+            <input class="form-input"type="text" name="campground[location]" id="location" placeholder="location">
+        </div>
+        <div class="form-row">
+            <label for="img-url">img-url</label>
+            <input class="form-input"type="text" name="campground[img-url]" id="img-url" placeholder="img-url">
+        </div>
+        <textarea class="form-input"name="campground[description]" id="description" placeholder="description"></textarea>
         <button>Submit</button>
     </form>
-    <a href="/campgrounds"><button>Go back</button></a>
+    <a class="button-link" href="/campgrounds">Go back</a>
