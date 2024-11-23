@@ -1,17 +1,21 @@
-<nav>
-    <div class="top">
-
-        <div class="nav-brand">YelpCamp</div>
-        <div class="nav-button"><svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
-            </svg></div>
-
-
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">YelpCamp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/campgrounds">Campgrounds</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/campgrounds/new">New campground</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="nav-link"><a href="/">Home</a></div>
-    <div class="nav-link"><a href="/campgrounds">Campgrounds</a></div>
-    <div class="nav-link"><a href="/campgrounds/new">New campground</a></div>
-
-</nav>
+  </nav>

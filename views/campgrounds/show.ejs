@@ -1,5 +1,5 @@
 <%- layout("layouts/boilerplate.ejs") %>
-
+<div class="container">
     <h1>
         <%= campground.title %> campground
     </h1>
@@ -12,7 +12,7 @@
     <p>
         <%= campground.description %>
     </p>
-    <img src="<%= campground.image %>" alt="Campground Image">
+    <img src="<%= campground.image %>" alt="Campground Image" class="img-fluid">
 
 
     <a href="/campgrounds/<%= campground._id %>/edit"><button>Edit</button></a>
@@ -20,3 +20,4 @@
         <button>DELETE CAMPGROUND</button>
     </form>
     <a class="button-link" href="/campgrounds">Go back</a>
+</div>
