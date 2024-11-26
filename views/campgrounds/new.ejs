@@ -1,24 +1,60 @@
 <%- layout("layouts/boilerplate.ejs") %>
-    <h1 class="form-title">Create new campground</h1>
-    <form class="campground-form" action="/campgrounds" method="post">
 
-        <div class="form-row">
-            <label for="title">Campground title</label>
-            <input class="form-input" type="text" name="campground[title]" id="title" placeholder="Title">
+<div class="row">
+  <h1 class="text-center">New campground</h1>
+  <div class="col-6 offset-3">
+    <form class="campground-form" action="/campgrounds" method="post">
+      <div class="mb-2">
+        <label class="form-label" for="title">Campground title</label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[title]"
+          id="title"
+          placeholder="Title"
+        />
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="price">Price/night</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">$</span>
+          <input
+            class="form-control"
+            type="text"
+            name="campground[price]"
+            id="price"
+            placeholder="0.0"
+          />
         </div>
-        <div class="form-row">
-            <label for="price">Price/night</label>
-            <input class="form-input" type="text" name="campground[price]" id="price" placeholder="0">
-        </div>
-        <div class="form-row">
-            <label for="location">Location</label>
-            <input class="form-input"type="text" name="campground[location]" id="location" placeholder="location">
-        </div>
-        <div class="form-row">
-            <label for="img-url">img-url</label>
-            <input class="form-input"type="text" name="campground[img-url]" id="img-url" placeholder="img-url">
-        </div>
-        <textarea class="form-input"name="campground[description]" id="description" placeholder="description"></textarea>
-        <button>Submit</button>
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="location">Location</label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[location]"
+          id="location"
+          placeholder="location"
+        />
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="img-url">img-url</label>
+        <input
+          class="form-control"
+          type="text"
+          name="campground[img-url]"
+          id="img-url"
+          placeholder="img-url"
+        />
+      </div>
+      <textarea
+        class="form-control"
+        name="campground[description]"
+        id="description"
+        placeholder="description"
+      ></textarea>
+      <button class="btn btn-success mt-2">Submit</button>
     </form>
     <a class="button-link" href="/campgrounds">Go back</a>
+  </div>
+</div>
